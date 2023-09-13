@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de tareas</title>
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://kit.fontawesome.com/4bec61a6f2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="gestion-tareas">
+    <h1>Gestión de Tareas</h1>
+    
+    <h2>Crear Nueva Tarea</h2>
+    <form action="/api/tareas" method="POST" enctype='multipart/form-data' id="crearTareaForm">
+        <input type="text" name="titulo" id="titulo" placeholder="Título" required>
+        <input type="text" name="descripcion" id="descripcion" placeholder="Descripción" required>
+        <select name="estado" value="estado" id="estado" required>
+            <option name="estado" value="pendiente">Pendiente</option>
+            <option name="estado" value="en-progreso">En Progreso</option>
+            <option name="estado" value="completada">Completada</option>
+        </select>
+        <button type="submit">Crear Tarea</button>
+    </form>
+    </section>
+
+    <section class="visualizacion-tareas">
+    <h2>Lista de Tareas</h2>
+
+    <ul class="listaTareas">
+        <%for(let i=0; i < tasks.length; i++){ %>
+            <li class="task-li">
+                <div class="task-heading">
+                    <h3><%= tasks[i].id %>. </h3>
+                    <h3><%= tasks[i].titulo %></h3>
+                </div>
+                <h3><%= tasks[i].descripcion %></h3>
+                <h3><%= tasks[i].estado %></h3>
+                <div class="icon-edits">
+                    <form action="/api/tareas/<%= tasks[i].id %>?_method=PUT" method="POST">
+                        <a href="/api/tareas/<%= tasks[i].id %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="/api/tareas/<%= tasks[i].id %>"><i class="fa-solid fa-trash"></i></a>
+                    </form>
+                </div>
+            </li>
+        <% } %>
+    </ul>
+    </section>
+    
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 16px;
+}
+
+.gestion-tareas h1 {
+    color: #333;
+    font-size: 2rem;
+    border-bottom: 1px solid #333;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+select {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b35700;;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    
+}
+
+
+.listaTareas {
+    list-style-type: none;
+    width: 80%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.task-li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    width: 80%;
+    margin-right: 10px; 
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.task-heading {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; 
+}
+
+.task-heading h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+h3.task-state {
+    font-size: 1rem;
+    color: #888;
+}
+
+.task-li a {
+    text-decoration: none;
+    color: #007bff; 
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.task-li a:hover {
+    color: #b35700; 
+}

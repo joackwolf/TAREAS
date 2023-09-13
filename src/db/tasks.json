@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "titulo": "Lavar el auto",
+      "descripcion": "No olvidarme",
+      "estado": "Pendiente"
+    },
+    {
+        "id": 2,
+        "titulo": "Lavar casa",
+        "descripcion": "No olvidarme",
+        "estado": "Completada"
+      },
+      {
+        "id": 3,
+        "titulo": "Ir al cine",
+        "descripcion": "No olvidarme",
+        "estado": "En progreso"
+      }
+]
